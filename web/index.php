@@ -1,8 +1,15 @@
+<?php
+  // Don't remove this block.
+  // This block should be included in *all* php file
+  if(file_exists('/app/lib/labs_ip.php')) {
+    include_once('/app/lib/labs_ip.php');
+  }
+?>
 <!DOCTYPE HTML>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
     <title>Periodic table of HTML 5 elements</title>
   </head>
   <body>

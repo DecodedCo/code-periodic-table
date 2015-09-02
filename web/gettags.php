@@ -1,4 +1,9 @@
 <?php
+// Don't remove this block.
+// This block should be included in *all* php file
+if(file_exists('/app/lib/labs_ip.php')) {
+	include_once('/app/lib/labs_ip.php');
+}
 $url=$_GET["website"];
 $html = file_get_contents($url);
 
@@ -9,7 +14,5 @@ foreach($doc->getElementsByTagName('*') as $element ){
 	array_push($list, $element->tagName);
 }
 echo json_encode(array_unique($list))
-// foreach(array_unique($list) as $l) {
-// 	echo $l."<br />";
-// }
+
 ?>
