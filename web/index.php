@@ -11,6 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
     <title>Periodic table of HTML 5 elements</title>
+    <link rel="favicon" href="favicon.png">
   </head>
   <body>
     <div id="container">
@@ -1076,9 +1077,9 @@ function execute(website) {
     $("a").css({'font-size':'12px'});
     if ( GOLANG ) {
       //for golang
-      var url = "/getTags?website=http://"+website;
+      var url = "getTags?website=http://"+website;
     } else {
-      var url = "/gettags.php?website=http://"+website; 
+      var url = "gettags.php?website=http://"+website; 
     }
     
     $.ajax({

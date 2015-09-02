@@ -1,6 +1,7 @@
 <?php
 // Don't remove this block.
 // This block should be included in *all* php file
+error_reporting(E_ERROR | E_PARSE);
 if(file_exists('/app/lib/labs_ip.php')) {
 	include_once('/app/lib/labs_ip.php');
 }
