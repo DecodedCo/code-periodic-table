@@ -1032,6 +1032,7 @@ $(".example").click(function(event) {
   execute($(this).attr('href'))
 })
 $("#websiteForm").submit(function() {
+  event.preventDefault();
   execute($("#searchBox").val())
 });
 var spinner;
