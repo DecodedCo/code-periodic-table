@@ -1,10 +1,10 @@
 /*@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700); */
 
 *{margin: 0; padding:0; box-sizing: border-box;}
-html{ 
-	height: 100%; 
-	line-height: 1.5; 
-	font-size: 62.5%; /* =10px */ 
+html{
+	height: 100%;
+	line-height: 1.5;
+	font-size: 62.5%; /* =10px */
 	font-family:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
@@ -44,10 +44,10 @@ h1 {
 	max-width:1000px;
 	margin: 1em auto;
 	background: #eee;
-	
+
 }
 #descriptions .info{
-    opacity: 0; 
+    opacity: 0;
     height: 0;
     overflow: hidden;
 	transition: opacity 2s ease-out;
@@ -58,32 +58,40 @@ h1 {
 
 
 #descriptions .info:target{
-    opacity: 1; 
+    opacity: 1;
     height: auto;
 	padding: 1rem 1rem;
 	background: rgba(255,255,255, .1);
 }
 
-#descriptions a {
+#descriptions a,
+.by-decoded a {
 	color: black;
 }
 
-#container{
+#container, .by-decoded{
 	width: 90%;
 	max-width: 1000px;
 	margin: 0 auto;
-	margin-top: 2em; 
+	margin-top: 2em;
 }
 #container:after {
   content: "";
   display: table;
   clear: both;
 }
-.row{ 
+
+.by-decoded {
+	text-align: center;
+	border-top: 1px solid #ccc;
+	padding: 1em;
+}
+
+.row{
 	width: 100%;
 	display: block;
 }
-.row span{ 
+.row span{
 	float: left;
 }
 #f-block span{
@@ -94,22 +102,22 @@ h1 {
 	width: 50%;
 	height: 5%;
 }
-.row span{ 
+.row span{
 	display: block;
 }
 @media only screen and (min-width : 768px) {
 	.element{
-		width: 5.55%; 
+		width: 5.55%;
 		height: 5.5rem;
 	}
 	#f-block{
 		margin-top: 30px;
 	}
-	.span-15{ 
+	.span-15{
 		width: 83.325%;
 		height: 1px;
 	}
-	.span-9{ 
+	.span-9{
 		width: 49.999%;
 		height: 1px;
 	}
@@ -119,7 +127,7 @@ h1 {
 	text-align: center;
 	color: #333;
 	display: block;
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	padding: 1.5rem 0;
 	text-decoration: none;
@@ -134,11 +142,11 @@ h1 {
 	list-style-type: none;
 	text-align: center;
 }
-.key li { 
-	display: inline-block; 
+.key li {
+	display: inline-block;
 	margin: 0 .2rem;
 }
-.swatch{ 
+.swatch{
 	width: 10px;
 	height: 10px;
 	border: solid 1px #777;
@@ -220,7 +228,7 @@ transition: all 0.2s;
 
 span.element:hover {
 	transform: scale(1.4);
-	
+
 }
 
 span.element:hover a {
@@ -256,24 +264,3 @@ input:focus {
 	outline: none;
 	border: 1px solid black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

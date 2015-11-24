@@ -1012,6 +1012,8 @@
       </div>
     </div>
 
+    <footer class="by-decoded">This is an experiment made by the team at <a href="http://www.decoded.com">Decoded</a>.</footer>
+
     <script type="text/javascript" src="spin.js">
     </script><script type="text/javascript" src="jquery-1.9.1.js"></script>
     <script type="text/javascript">
@@ -1068,9 +1070,9 @@ function execute(website) {
       //for golang
       var url = "getTags?website=http://"+website;
     } else {
-      var url = "gettags.php?website=http://"+website; 
+      var url = "gettags.php?website=http://"+website;
     }
-    
+
     $.ajax({
            type: "POST",
            url: url,
@@ -1079,23 +1081,23 @@ function execute(website) {
            {
             spinner.stop();//stop the spinner
               if ( !GOLANG ) {
-                data = $.parseJSON(data)  
+                data = $.parseJSON(data)
               }
               $.each(data, function(k, item) {
                 var link;
                 if ( GOLANG ) {
                   link = $('a[href="#'+i+'"]');
-                  
+
                 } else {
                   link = $('a[href="#'+item+'"]');
                 }
                 console.log(link.data("count")+10)
                 if (!isNaN(link.data("count"))) {
-                  link.data("count", link.data("count")+10)    
+                  link.data("count", link.data("count")+10)
                 } else {
-                  link.data("count", 10)  
+                  link.data("count", 10)
                 }
-                
+
               });
               $( ".element" ).find( "a" ).each(function( index ) {
                 var count = parseInt($(this).data("count"));
@@ -1108,7 +1110,7 @@ function execute(website) {
               });
 
               }
-              
+
          });
 
     return false; // avoid to execute the actual submit of the form.
